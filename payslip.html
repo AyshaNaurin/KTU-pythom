@@ -1,0 +1,66 @@
+<html>
+<head>
+<script type="text/javascrip">
+function pay()
+{
+var a=parseINt(document.slip.bp.value);
+var b=parseINt(document.slip.ln.value);
+var c=parseINt(document.slip.pf.value);
+var d=parseINt(document.slip.ins.value);
+if(a<=20000)
+{ 
+ var dd= a*(38/100);
+ var hh=500;
+ document.slip.da.value=dd;
+ document.slip.hra.value=hh;
+ }
+ else if(a>20000&&a<=30000)
+ {
+  var dd=a*(30/100) ;
+  var hh=250;
+  document.slip.da.value=dd;
+  document.slip.hra.value=hh;
+ }
+ }
+<title>Payslip</title>
+</script>
+</head>
+<body>
+<form name="Slip">
+E.id &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp :<input type="text" name="Eid">
+<br>
+E.name &nbsp :<input type="text" name="E.name">
+<br>
+<br>
+Basic pay&nbsp :<input type="text" name="bp">
+<br>
+loan &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:<input type="text" name="ln">
+<br>
+PF &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:<input type="text" name="pf">
+<br>
+Insurance&nbsp:<input type:"text"name="ins">
+<br>
+<br>
+<br>
+<input type="button" value="Submit" onclick=pay();>
+<br>
+<br>
+<br>
+DA:<input type="text"name ="da">
+HRA:<input type="text" name = "hra">
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<br>
+<br>
+<br>
+GROSS PAY:<input type="text"name="gp">
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<br>
+<br>
+<br>
+NET PAY:<input type="text"name="np">
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+</form>
+</body>
+</head>
+</html>
+
